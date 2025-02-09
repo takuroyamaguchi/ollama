@@ -1,0 +1,13 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: elyza-llama-3-elyza-jp-8b-gguf
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  path: ./manifests
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: ollama
+  targetNamespace: elyza-llama
