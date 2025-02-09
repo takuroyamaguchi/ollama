@@ -1,0 +1,17 @@
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachine
+metadata:
+  name: ubuntu-alpr1
+  namespace: default
+  annotations:
+    vmoperator.vmware.com/image-supported-check: disable
+spec:
+  className: best-effort-small
+  imageName: cloud-images.ubuntu.com/bionic/current/bionic-server-cloudimg-amd64.ova
+  powerState: poweredOn
+  networkInterfaces:
+    - networkName: "VM Network"
+      ethernetCardType: "vmxnet3"
+  #vmMetadata:
+    #configMapName: user-data-ubuntu
+    #transport: CloudInit
