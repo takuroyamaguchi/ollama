@@ -1,5 +1,13 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
-resources:
-- deployment.yaml
-- service.yaml
+metadata:
+  name: elyza-llama-3-elyza-jp-8b-gguf
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  path: ./manifests
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: ecs
+  targetNamespace: default  # ← この行を追加または修正
