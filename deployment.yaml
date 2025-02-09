@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: elyza-llama-3-elyza-jp-8b-gguf
-        image: ollama/elyza-llama-3-elyza-jp-8b-gguf
+       # image: ollama/elyza-llama-3-elyza-jp-8b-gguf
         ports:
         - containerPort: 11434
         resources:
