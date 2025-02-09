@@ -1,0 +1,12 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elyza-llama-3-elyza-jp-8b-gguf
+spec:
+  template:
+    spec:
+      containers:
+      - name: elyza-llama-3-elyza-jp-8b-gguf
+        image: registry.hf.space/mmnga/elyza-llama-3-elyza-jp-8b-gguf:latest  # Hugging Face のイメージを使用
+        # ... その他の設定 ...
