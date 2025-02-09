@@ -8,5 +8,5 @@ spec:
     spec:
       containers:
       - name: elyza-llama-3-elyza-jp-8b-gguf
-        image: registry.hf.space/mmnga/elyza-llama-3-elyza-jp-8b-gguf:latest  # 完全なイメージ名を指定
+        image: https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B-GGUF/resolve/main/Llama-3-ELYZA-JP-8B-q4_k_m.gguf  # 完全なイメージ名を指定
         #... その他の設定...
